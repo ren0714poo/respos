@@ -1,0 +1,56 @@
+@media screen and (max-width:480px){
+  .map{
+    height: 75svh;
+  }
+}
+
+html, body {
+  color: white;
+  background: #2D343C;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 100px calc(100vh - 200px) 100px;
+  grid-template-areas: 
+  "header"
+  "main"
+  "footer"
+  ;
+}
+
+
+
+header{
+  width: 100%;
+  height: 90px;
+  background: #444C55;
+  display: flex;
+  grid-area: header;
+}
+
+
+
+
+main{
+  grid-area: main;
+}
+
+
+
+
+
+
+footer{
+  width: 100%;
+  height: 90px;
+  background: #444C55;
+  display: flex;
+  justify-content: space-around;
+  grid-area: footer;
+}
+
+footer button{
+  background: transparent;
+  border: none;
+}

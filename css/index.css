@@ -1,0 +1,105 @@
+
+@media screen and (max-width:480px){
+  body{
+    background: linear-gradient(to bottom,#F7A4AE,#FFF7D7);
+
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logo{
+  text-align: center;
+  margin-top: 100px;
+  line-height: 5rem;
+}
+
+.formWrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.formContainer{
+  background: rgba(152, 147, 147, 0.2);
+  padding: 2rem;
+  border-radius: 1.5rem;
+  backdrop-filter: blur(15px);
+  text-align: center;
+  width: 60%;
+  max-width: 400px;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.2);
+}
+
+input[type="text"],
+input[type="password"]{
+  width: 90%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: rgb(255,255,255,0.4);
+  color: #333;
+  cursor: pointer;
+}
+
+button{
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.log{
+  background: white;
+  color: #333;
+}
+
+.sign{
+  background: rgb(255, 255, 255,0.4);
+  color: #333;
+}
+
+.or{
+  margin: 1rem 0;
+  color: rgb(255, 255, 255,0.4);
+  font-size: 0.9rem;
+  /* position: relative; */
+}
+
+.or::before,
+.or::after{
+  content: "";
+  position: absolute;
+  top: 70%;
+  width: 40%;
+  height: 1px;
+  background: rgb(255, 255, 255,0.4);
+}
+
+.or::before{
+  left: 0;
+}
+
+.or::after{
+  right: 0;
+}
+
+.Google{
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+
+
+
