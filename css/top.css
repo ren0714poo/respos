@@ -1,6 +1,6 @@
 @media screen and (max-width:480px){
   .map{
-    height: 75svh;
+    height: 77svh;
   }
 }
 
@@ -23,7 +23,7 @@ html, body {
 
 header{
   width: 100%;
-  height: 90px;
+  height: 100px;
   background: #444C55;
   display: flex;
   grid-area: header;
@@ -36,21 +36,136 @@ main{
   grid-area: main;
 }
 
+.modal {
+  display: none; /* 初期状態で非表示 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6); /* 半透明背景 */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #3E4852;
+  padding: 20px;
+  border-radius: 10px;
+  width: 85%;
+  max-width: 400px;
+  color: white;
+  position: relative;
+}
+
+.upload-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.camera-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.modal-option {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.submit-btn {
+  background-color: #FF8C9D;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* モーダル本体 */
+.modal-content {
+  background-color: #2D343C;
+  width:  70%;
+  max-width: 360px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  h3{
+    text-align: center;
+  }
+}
+
+/* アップロードエリア */
+.upload-area {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+.camera-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+}
+
+/* オプション */
+.modal-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 4px;
+}
+
+/* テキストエリア */
+textarea {
+  background-color: #2D343C;
+  color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 8px;
+  resize: none;
+}
+
+/* 投稿ボタン */
+.submit-btn {
+  background-color: #FF9AA2;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  border-radius: 20px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
 
 
 
 
 
-footer{
-  width: 100%;
-  height: 90px;
+
+
+
+footer {
   background: #444C55;
   display: flex;
   justify-content: space-around;
-  grid-area: footer;
+  align-items: center;
 }
 
-footer button{
+footer button {
   background: transparent;
   border: none;
 }
+
+

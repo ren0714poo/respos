@@ -1,22 +1,19 @@
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 34.7056977, lng: 135.5022748 }, // 大阪駅
+    center: { lat: 34.7056977, lng: 135.5022748 },
     zoom: 11,
     mapTypeId: 'satellite',
-     // 全てのラベルを非表示（地名、道路名、ランドマーク名など）
     styles: [
       {
         featureType: "all",
         elementType: "labels",
         stylers: [{ visibility: "off" }]
       },
-            // 鉄道（線路）を非表示
       {
         featureType: "transit.line",
         elementType: "geometry",
         stylers: [{ visibility: "off" }]
       },
-      // 鉄道の駅アイコンも非表示（必要に応じて）
       {
         featureType: "transit.station",
         elementType: "all",
@@ -25,13 +22,22 @@ function initMap() {
     ]
   });
 
+  // 投稿モーダルの制御
+  const modal = document.getElementById("postModal");
+  const openBtn = document.getElementById("openModal");
 
-  // const marker = new google.maps.Marker({
-  //   position: { lat: 34.7056977, lng: 135.5022748 },
-  //   map: map,
-  //   title: "中崎町",
-  // });
-  
+  if (openBtn && modal) {
+    openBtn.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
+
+    // モーダル外クリックで閉じる
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
 }
 
-initMap()
+initMap();

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>respos_profile</title>
+  <link rel="stylesheet" href="css/profile.css">
+  <style>
+    /* CSSはこの下に記述 */
+  </style>
+</head>
+<body>
+  <header>
+  </header>
+  
+  <main>
+    <h1>MatsuokaRen</h1>
+    <div class="profile">
+      <div class="profile_icon">
+        <img src="img/icon.png" alt="アイコン写真">
+      </div>
+      <div class="follow">
+        <p>0<br>フォロワー</p>
+        <p>0<br>フォロー中</p>
+      </div>
+      <div class="choice_wrap">
+        <div class="choice"><button type="button" id="edit" onclick="location.href='edit.html'">プロフィール編集</button></div>
+        <div class="choice"><button type="button" id="addition" onclick="location.href='addition.html'">フレンド追加</button></div>
+      </div>
+    </div>
+    <div class="post">
+      <!-- 画像を複数配置 -->
+      <img class="mypost" src="img/humbarg.png" alt="">
+      <img class="mypost" src="img/misoramen.png" alt="">
+      <img class="mypost" src="img/pancake.png" alt="">
+      <img class="mypost" src="img/pasta.png" alt="">
+      <img class="mypost" src="img/komeda.png" alt="">
+      <img class="mypost" src="img/prin.png" alt="">
+      <img class="mypost" src="img/yamaokaya.png" alt="">
+      <img class="mypost" src="img/itirennya.png" alt="">
+    </div>
+          <!-- モーダル -->
+  <div id="postModal" class="modal">
+    <div class="modal-content">
+      <h3>新規投稿</h3>
+    <div class="upload-area" id="openUploadModal">
+      <img src="img/cameraicon.png" alt="カメラアイコン" class="camera-icon">
+      <p>写真をアップロードする</p>
+    </div>
+
+
+      <div class="modal-option" id="openLocationModal">
+  <span> 場所を追加</span>
+  <span>▶</span>
+</div>
+
+      <div class="modal-option">
+        <span> おすすめの時間帯を追加</span>
+        <span>▶</span>
+      </div>
+
+      <label for="point">おすすめポイント</label>
+      <textarea id="point" rows="4"></textarea>
+
+      <button class="submit-btn">投稿する</button>
+    </div>
+  </div>
+<!-- サブモーダル（場所追加） -->
+<div id="locationModal" class="modal">
+  <div class="modal-content">
+    <h4>場所を追加</h4>
+    <input type="text" placeholder="場所を入力">
+    <button id="closeLocationModal">閉じる</button>
+  </div>
+</div>
+  </main>
+
+  <footer>
+    <button type="button" id="pin" onclick="location.href='top.html'"><img src="img/tabler_map-pin-filled.png" alt="ピン"></button>
+    <button type="button" id="openModal"><img src="img/post.png" alt="投稿"></button>
+    <button type="button" id="profile" onclick="location.href='profile.html'"><img src="img/icon-park-solid_people.png" alt="プロフィール"></button>
+  </footer>
+
+    <script src="js/profile.js"></script>
+
+</body>
+</html>
